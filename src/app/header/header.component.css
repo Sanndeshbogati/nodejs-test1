@@ -1,0 +1,24 @@
+.img{
+  height: 56px;
+  width: 76px;
+}
+.home{
+  color: aliceblue;
+}
+.category{
+  color: aliceblue;
+
+}
+.products{
+  color: aliceblue;
+}
+.home:hover{
+  color:tan;
+}
+
+.category:hover{
+  color:tan;
+}
+.products:hover{
+  color:tan;
+}
