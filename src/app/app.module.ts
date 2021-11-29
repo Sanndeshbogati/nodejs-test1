@@ -13,6 +13,10 @@ import { ErrorComponent } from './error/error.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{ MatIconModule} from'@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductListComponent } from './product-list/product-list.component';
+import { CreatProductComponent } from './creat-product/creat-product.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,10 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     CategoryComponent,
     ProductsComponent,
-    ErrorComponent
+    ErrorComponent,
+    ProductListComponent,
+    CreatProductComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,9 @@ import { HttpClientModule } from '@angular/common/http';
      MatButtonModule,
      BrowserAnimationsModule,
      MatToolbarModule,
-     MatIconModule
+     MatIconModule,
+     FormsModule,
+     ReactiveFormsModule
 
   ],
   providers: [],

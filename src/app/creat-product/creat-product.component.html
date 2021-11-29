@@ -1,0 +1,21 @@
+<h1>Add New Product</h1>
+<form [formGroup]="addProduct" (ngSubmit)="collectProduct()">
+<div>
+<label for ="ni_category">category</label>
+<input type="text" id="ni_category" formControlName="category" placeholder="enter category">
+</div>
+<div>
+<label for ="ni_catid"> catID</label>
+<input type="text" id="ni_catid" formControlName="catid" placeholder="enter category">
+</div>
+<div>
+<label for ="ni_prid">PrId</label>
+<input type="text" id="ni_prid" formControlName="prid" placeholder="enter category">
+</div>
+
+<div>
+<label for ="ni_product">product</label>
+<input type="text" id="ni_product" formControlName="product" placeholder="enter category">
+</div>
+<button type="submit">submit</button>
+</form>

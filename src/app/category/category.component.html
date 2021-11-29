@@ -1,5 +1,15 @@
 <p>Details workrks</p>
-<div *ngFor="let cd of catData"> {{cd.cat}}</div>
+<div (click)="onSelect(cd)"
+*ngFor="let cd of catData"> {{cd.cat}}</div>
 <!-- <p>{{catData[catId].catid}}</p>
 <p>{{catData[catId].product}}</p>
 <p>{{catData[catId].prid}}</p> -->
+
+<table>
+  <tr>
+  <th>category</th>
+</tr>
+  <tr *ngFor = "let cd of catData" >
+    <td>{{cd.cat}}</td>
+  <tr>
+</table>

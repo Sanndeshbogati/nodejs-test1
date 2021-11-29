@@ -1,13 +1,33 @@
 <p>products works!</p>
 <table>
-  <th>cat</th>
+  <th>category</th>
   <th>cat-id</th>
   <th>product</th>
   <th>pr-id</th>
-  <tr *ngFor = "let cd of catData">
+  <th> </th>
+  <th></th>
+  <tr *ngFor = "let cd of catData" >
+    <td>{{cd.category}}</td>
     <td>{{cd.cat}}</td>
     <td>{{cd.catid}}</td>
     <td>{{cd.product}}</td>
     <td>{{cd.prid}}</td>
+    <td>
+
+        <div class="example-button-container">
+          <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+            <mat-icon (click)="DeleteProduct(cd._id)" >delete</mat-icon>
+          </button>
+        </div>
+
+    </td>
+    <td>
+      <div class="example-button-container">
+        <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+          <mat-icon (click)="UpdateProduct(cd._id)">bookmark</mat-icon>
+        </button>
+      </div>
+
+    </td>
   </tr>
 </table>

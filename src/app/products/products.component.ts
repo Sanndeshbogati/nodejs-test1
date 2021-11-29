@@ -13,15 +13,26 @@ export class ProductsComponent implements OnInit {
   catData:any;
 
   constructor( private dataservice:DataService,
-    private router:Router) { }
+    private router:Router,
+    private activatedroute:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.dataservice.getCat().subscribe(
       (data) => {this.catData=data}
     )
   }
-onSelect(i:any){
-  this.id_= i.id
-  this.router.navigate(['products',i.id])
-}
+
+  DeleteProduct(id:any)
+  {
+    this.dataservice.delProduct_md(id).subscribe( (result) => {console.log(result)})
+  }
+
+  UpdateProduct(id:any)
+  {
+    this.id_= id.catid
+    this.router.navigate(['/update-product',id])
+  }
+
+
+
 }

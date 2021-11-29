@@ -9,4 +9,4 @@ let catSchema =new mongoose.Schema(
     id:Number
   }
 )
-module.exports=mongoose.model("materialS",catSchema)
+module.exports=mongoose.model("materialS",catSchema) 
